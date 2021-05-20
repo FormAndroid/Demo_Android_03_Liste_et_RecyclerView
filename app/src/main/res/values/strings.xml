@@ -3,4 +3,5 @@
     <string name="btn_liste">Demo Liste</string>
     <string name="btn_recyclerview">Demo RecyclerView</string>
     <string name="title_main_app">Demo des listes et des RecyclerView</string>
+    <string name="title_demo_list">Demo de la Liste</string>
 </resources>
