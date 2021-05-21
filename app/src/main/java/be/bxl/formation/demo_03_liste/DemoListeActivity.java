@@ -66,11 +66,11 @@ public class DemoListeActivity extends AppCompatActivity {
 
         // Collection JAVA avec les données
         ArrayList<Person> people = new ArrayList<>();
-        people.add(new Person("Zaza", "Vanderquack"));
-        people.add(new Person("Donald", "Duck"));
-        people.add(new Person("Daisy", "Duck"));
-        people.add(new Person("Balthazar", "Picsou"));
-        people.add(new Person("Della", "Duck"));
+        people.add(new Person("Zaza", "Vanderquack", Person.Gender.FEMALE));
+        people.add(new Person("Donald", "Duck", Person.Gender.MALE));
+        people.add(new Person("Daisy", "Duck",  Person.Gender.FEMALE));
+        people.add(new Person("Balthazar", "Picsou", Person.Gender.MALE));
+        people.add(new Person("Della", "Duck",  Person.Gender.FEMALE));
 
 
         // Pour le SimpleAdpater => Il est necessaire de créer une liste de dico
@@ -96,7 +96,7 @@ public class DemoListeActivity extends AppCompatActivity {
         // Ajoute d'un element dans la liste
         btnAdd = findViewById(R.id.btn_demo_liste_add);
         btnAdd.setOnClickListener(v -> {
-            people.add(new Person("Riri", "Duck"));
+            people.add(new Person("Riri", "Duck", Person.Gender.MALE));
             adapter.notifyDataSetChanged();
         });
     }
