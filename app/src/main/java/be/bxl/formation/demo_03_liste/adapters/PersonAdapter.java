@@ -1,8 +1,10 @@
 package be.bxl.formation.demo_03_liste.adapters;
 
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -22,6 +24,7 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.ViewHolder
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
         private TextView tvFirstname, tvLastname;
+        private ImageView imgPerson;
 
         public ViewHolder(View v) {
             super(v);
@@ -29,6 +32,7 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.ViewHolder
             // Liaison avec le layout
             tvFirstname = v.findViewById(R.id.tv_item_person_firstname);
             tvLastname = v.findViewById(R.id.tv_item_person_lastname);
+            imgPerson = v.findViewById(R.id.img_item_person_image);
         }
 
         public TextView getTvFirstname() {
@@ -37,6 +41,10 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.ViewHolder
 
         public TextView getTvLastname() {
             return tvLastname;
+        }
+
+        public ImageView getImgPerson() {
+            return imgPerson;
         }
     }
     //endregion
@@ -68,6 +76,14 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.ViewHolder
         // Mise a jours de la vue via le ViewHolder
         holder.getTvFirstname().setText(target.getFirstname());
         holder.getTvLastname().setText(target.getLastname());
+
+        ImageView img = holder.getImgPerson();
+        if(target.getGender() == Person.Gender.FEMALE) {
+            img.setImageResource(R.drawable.duck_female);
+        }
+        else {
+            img.setImageResource(R.drawable.duck_male);
+        }
     }
 
     // Méthode qui permet d'obtenir le nombre d'element dans la liste
