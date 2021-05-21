@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import android.os.Bundle;
+import android.widget.Button;
 
 import java.util.ArrayList;
 
@@ -15,6 +16,7 @@ import be.bxl.formation.demo_03_liste.models.Person;
 public class DemoRecyclerViewActivity extends AppCompatActivity {
 
     private RecyclerView rvDemo;
+    private Button btnAddElement;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,5 +44,14 @@ public class DemoRecyclerViewActivity extends AppCompatActivity {
 
         // Definir l'adapter de la Recycler View
         rvDemo.setAdapter(adapter);
+
+
+        // Event du bouton
+        btnAddElement = findViewById(R.id.btn_demo_recyclerview_add);
+        btnAddElement.setOnClickListener(v -> {
+            Person p = new Person("Riri", "Duck", Person.Gender.MALE);
+            people.add(p);
+            adapter.notifyDataSetChanged();
+        });
     }
 }
