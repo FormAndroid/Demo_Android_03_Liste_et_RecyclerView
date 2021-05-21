@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Demo_03_Liste">
-        <activity android:name=".DemoListeActivity"></activity>
+        <activity android:name=".DemoRecyclerViewActivity"></activity>
+        <activity android:name=".DemoListeActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

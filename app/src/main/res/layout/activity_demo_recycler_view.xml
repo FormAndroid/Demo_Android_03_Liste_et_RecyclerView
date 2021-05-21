@@ -5,29 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".DemoListeActivity">
+    tools:context=".DemoRecyclerViewActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/title_demo_list"
-        android:textSize="40sp"
+        android:text="@string/title_demo_recyclerview"
+        android:textSize="30sp"
         android:textAlignment="center"
         />
 
     <Button
-        android:id="@+id/btn_demo_liste_add"
+        android:id="@+id/btn_demo_recyclerview_add"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/btn_add_element"
         />
 
-    <ListView
-        android:id="@+id/lv_demo_liste"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_demo_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />
-
-
 
 </LinearLayout>

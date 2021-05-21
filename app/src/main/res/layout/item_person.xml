@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:minHeight="90dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_item_person_lastname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NOM"
+        android:textSize="30sp"
+        />
+
+    <TextView
+        android:id="@+id/tv_item_person_firstname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PRENOM"
+        android:textSize="25sp"
+        />
+
+</LinearLayout>

@@ -4,4 +4,6 @@
     <string name="btn_recyclerview">Demo RecyclerView</string>
     <string name="title_main_app">Demo des listes et des RecyclerView</string>
     <string name="title_demo_list">Demo de la Liste</string>
+    <string name="btn_add_element">Ajouter element</string>
+    <string name="title_demo_recyclerview">Demo du Recycler View</string>
 </resources>

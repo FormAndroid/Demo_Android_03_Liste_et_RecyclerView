@@ -31,12 +31,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 openListActivity();
                 break;
             case R.id.btn_main_recyclerview:
-                throw new RuntimeException("Pas encore fait :( ");
+                openRecyclerActivity();
         }
     }
 
     private void openListActivity() {
         Intent intentList = new Intent(getApplicationContext(), DemoListeActivity.class);
         startActivity(intentList);
+    }
+
+    private void openRecyclerActivity() {
+        Intent intentRecycler = new Intent(getApplicationContext(), DemoRecyclerViewActivity.class);
+        startActivity(intentRecycler);
     }
 }
